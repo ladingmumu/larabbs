@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//显示首页
+Route::get('/','PagesController@root')->name('root');
