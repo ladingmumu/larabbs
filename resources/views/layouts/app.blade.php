@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
 </head>
 <body>
-    <div id="app" class="{{ route_class() }}-page">
+    <div id="app" class="{{ route_class() }}-page"> <!--路由专属CSS定位器-->
         @include('layouts._header')
         <div class="container">
             @include('layouts._message')
