@@ -31,3 +31,11 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 //------Auth::routes(); 等同于上面 9 行----
 
+
+//资源路由
+Route::resource('users','UsersController',['only'=>['show','update','edit']]);
+
+
+
+
+
