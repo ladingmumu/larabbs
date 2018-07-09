@@ -149,4 +149,25 @@ body {
 
 }
 
+/* Topic Show Page 话题展示页(帖子)*/
+
+@import "topic_body";
+
+.topics-show-page {
+    .panel {
+        padding: 15px;
+
+        h1 {
+            margin: 0.4em auto 0.6em;
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+}
+
+
+
+
+
+
 
