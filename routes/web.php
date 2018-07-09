@@ -32,12 +32,24 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 //------Auth::routes(); 等同于上面 9 行----
 
 
-//资源路由
+//用户资源路由
 Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 
 
-
-
-
-
+//话题（帖子）资源路由(laravel自动生成)
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+//分类资源路由
+Route::resource('categories','CategoriesController',['only'=>['show']]);
+
+
+
+
+
+
+
+
+
+
+
+
