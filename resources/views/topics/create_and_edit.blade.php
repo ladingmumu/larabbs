@@ -64,8 +64,6 @@
                 	<textarea name="body" id="editor" class="form-control" rows="3" placeholder="请填入至少三个字符的内容。" required>{{ old('body', $topic->body ) }}</textarea>
                 </div>
 
-
-
                     <div class="well well-sm">
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>保存</button>
                     </div>
@@ -99,7 +97,5 @@
     });
     </script>
 @stop
-
-
 
 
