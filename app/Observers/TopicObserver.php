@@ -46,4 +46,10 @@ class TopicObserver
             dispatch(new TranslateSlug($topic));
         }
     }
+
+
+    //删除话题后，连带其下所有回复一起被删除。避免死循环，直接使用DB类进行操作删除。
+    public function deleted(Topic $topic){
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
+    }
 }

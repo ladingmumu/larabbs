@@ -17,10 +17,18 @@ class ReplyObserver
     public function created(Reply $reply)
     {
         $topic = $reply->topic;
-        $topic->increment('reply_count', 1);
+        $topic->increment('reply_count', 1); //回复成功，条数+1
 
         // 通知作者话题被回复了
         $topic->user->notify(new TopicReplied($reply));
     }
+
+
+    public function deleted(Reply $reply){
+        $reply->topic->decrement('reply_count', 1);//删除回复，条数-1
+    }
+
+
+
 
 }
