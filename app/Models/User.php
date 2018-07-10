@@ -27,9 +27,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    //与话题模型关联
+    //与话题模型关联,一个用户拥有多条帖子
     public function topics(){
         return $this->hasMany(Topic::class);
+    }
+
+    //与回复模型关联,一个用户拥有多条回复
+    public function replies(){
+        return $this->hasMany(Reply::class);
     }
 
     //代码重构

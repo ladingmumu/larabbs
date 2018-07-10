@@ -36,7 +36,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 
 
-//话题（帖子）资源路由(laravel自动生成)
+//话题（帖子）资源路由(laravel代码生成器自动生成)
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
 //话题（帖子）show路由
 Route::get('topics/{topic}/{slug?}','TopicsController@show')->name('topics.show');
@@ -50,8 +50,8 @@ Route::resource('categories','CategoriesController',['only'=>['show']]);
 Route::post('upload_image','TopicsController@uploadImage')->name('topics.upload_image');
 
 
-
-
+//回复（帖子）资源路由(laravel代码生成器自动生成)
+Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 
 
